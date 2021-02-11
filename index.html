@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- run 'tsc' command in terminal, go live and debug in chrome -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="shortcut icon" href="img/icons/brush.png">
+  <base href="/">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div id="content">
+
+    <div id="canvasDiv">
+      <!-- <h2 id="loading-text">Loading ...</h2> -->
+      <canvas id="canvas" width="600" height="800" tabindex="1">
+      </canvas>
+      <textarea id="text-input" type="text" class="hidden"></textarea>
+      <audio controls id="audio-media">
+        Your browser does not support the audio element.
+      </audio>
+      <video width="320" height="240" controls id="video-media">
+        Your browser does not support the video element.
+      </video> 
+    </div>
+
+    <div class="toolbar">
+      <button id="line" class="top-left selected" disabled><img src="img/icons/pencil.png" alt="pencil"></button>
+      <button id="brush" class="not-selected" disabled><img src="img/icons/brush.png" alt="brush"></button>
+      <button id="text" class="not-selected" disabled><img src="img/icons/text.png" alt="text"></button>
+
+      <button id="btnFirstPage" disabled><img src="img/icons/arrow_goto_first.png" alt="back"></button>
+      <button id="btnPrevPage" class="not-selected" disabled><img src="img/icons/arrow_left.png" alt="back"></button>
+      <input id="inputPageNumber" type="number"></input>
+      <button id="btnNextPage" class="not-selected"><img src="img/icons/arrow_right.png" alt="next page"></button>
+      <button id="btnLastPage" class="top-right"><img src="img/icons/arrow_goto_last.png" alt="back"></button>
+
+      <input id="original" value="1" name="version" type="radio" checked="checked" />
+      <label id="lblSwitch1" for="original" class="bottom-left">O</label>
+      <input id="edit" value="2" name="version" type="radio" />
+      <label id="lblSwitch2" for="edit">Ú</label>
+      <input id="solution" value="3" name="version" type="radio" />
+      <label id="lblSwitch3" for="solution">Ř</label>
+
+      <button id="zoomin" class="not-selected"><img src="img/icons/zoomin.png" alt="zoom in"></button>
+      <input id="inputZoomInfo" type="text" disabled></input>
+      <button id="zoomout" class="not-selected bottom-right"><img src="img/icons/zoomout.png" alt="zoom out"></button>
+    </div>
+  </div>
+
+  <script type="module" src="dist/classes/classes.js"></script>
+  <script type="module" src="dist/classes/typed-text.js"></script>
+  <script type="module" src="dist/main.js"></script>
+</body>
+
+</html>
